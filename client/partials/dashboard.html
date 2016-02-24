@@ -9,7 +9,7 @@
 </tr>
 <tr ng-repeat = 'poll in polls | filter:myFilter'>
   <td ng-bind = "poll.user.name"></td>
-  <td><a ng-href = "#/polls/{{poll._id}}" ng-bind = "poll.question"></a></td>
+  <td><a ng-href = "#/poll/{{poll._id}}" ng-bind = "poll.question"></a></td>
   <td ng-bind = 'poll.created_at | date:"medium"'></td>
   <td><button ng-if = "user._id == poll.user._id" ng-click= 'deletePoll(poll._id)'>Delete</button></td>
 </tr>
