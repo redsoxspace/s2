@@ -1,0 +1,17 @@
+<a ng-href="#/create">Create a new poll</a>|<a ng-href="#/login" ng-click = "logout()">logout</a>
+<input type='text' ng-model = 'myFilter'>
+<table>
+<tr>
+  <th>Name</th>
+  <th>Survey Question</th>
+  <th>Date Posted</th>
+  <th>Question</th>
+</tr>
+<tr ng-repeat = 'poll in polls | filter:myFilter'>
+  <td ng-bind = "poll.user.name"></td>
+  <td><a ng-href = "#/polls/{{poll._id}}" ng-bind = "poll.question"></a></td>
+  <td ng-bind = 'poll.created_at | date:"medium"'></td>
+  <td><button ng-if = "user._id == poll.user._id" ng-click= 'deletePoll(poll._id)'>Delete</button></td>
+</tr>
+
+</table>

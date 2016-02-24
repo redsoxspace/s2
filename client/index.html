@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ng-app = 'app'>
+<head>
+  <meta charset="UTF-8">
+  <script src = 'angular/angular.js'></script>
+  <script src = 'angular-route/angular-route.js'></script>
+  <script src = 'angular/app.js'></script>
+  <script src = 'angular/controllers/controllers.js'></script>
+  <script src = 'angular/factories/factory.js'></script>
+  <title>{{Document}}</title>
+</head>
+<body>
+  <a ng-href = '#/login'> Login </a>
+  <a ng-href = '#/dashboard'> dashboard </a>
+  <a ng-href = '#/poll/17'> poll </a>
+  <a ng-href = '#/create'> create </a>
+  Hello World
+  <div ng-view>
+    <!--Partials will fill this!  -->
+  </div>
+</body>
+</html>

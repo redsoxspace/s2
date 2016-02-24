@@ -1,0 +1,36 @@
+<a ng-href = "#/dashboard"> Go to polls</a>
+
+<h3 ng-bind = "poll.question"></h3>
+<h6 ng-if ="poll">Click the vote button to choose one</h6>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td ng-bind = 'poll.option1.description'></td>
+      <td ng-bind = 'poll.option1.votes'></td>
+      <td><button ng-click="vote(poll._id,'option1')">Vote</button></td>
+    </tr>
+    <tr>
+      <td ng-bind = 'poll.option2.description'></td>
+      <td ng-bind = 'poll.option2.votes'></td>
+      <td><button ng-click="vote(poll._id,'option2')">Vote</button></td>
+    </tr>
+    <tr>
+      <td ng-bind = 'poll.option3.description'></td>
+      <td ng-bind = 'poll.option3.votes'></td>
+      <td><button ng-click="vote(poll._id,'option3')">Vote</button></td>
+    </tr>
+    <tr>
+      <td ng-bind = 'poll.option4.description'></td>
+      <td ng-bind = 'poll.option4.votes'></td>
+      <td><button ng-click="vote(poll._id,'option4')">Vote</button></td>
+    </tr>
+  </tbody>
+</table>
